@@ -1,0 +1,2 @@
+DOCKER_IMAGE=openwrt-version
+TEST_FUNC=https://openwrt.org/toh/hwdata/d-link/d-link_dir-860l_b1
