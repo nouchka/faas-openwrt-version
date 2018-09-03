@@ -14,7 +14,7 @@ init:
 	@echo "create project, cp makefile and make init TYPE=dockerfile"
 	@echo "DOCKER_IMAGE=$(DOCKER_IMAGE)\nTEST_FUNC=Test content" > ENV
 	@echo "change default test content in ENV"
-	faas-cli new $(DOCKER_IMAGE) --lang $(TYPE)
+	faas-cli new $(DOCKER_IMAGE) -p $(DOCKER_NAMESPACE) --lang $(TYPE)
 
 run:
 	docker run --rm --entrypoint sh $(DOCKER_NAMESPACE)/$(DOCKER_IMAGE) -c "echo $(TEST_FUNC)|/usr/bin/$(DOCKER_IMAGE)"
